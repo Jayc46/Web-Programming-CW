@@ -1,0 +1,338 @@
+body{
+   
+    background-color: #F5F5F5;
+    margin:0px
+}
+* {
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.2s;
+}
+
+/*styling table*/
+table {
+  border-collapse: collapse;
+  margin : 25px 25px ;
+  font-size: 14px;
+  min-width : 400px;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 5px #888;
+  padding:0;
+}
+#tableHeader{
+    background-color: #87CEEB;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+th, td{
+    padding: 12px 15px;
+}
+
+ tr:not(:first-child){
+    border-bottom: 1.5px solid black;
+}
+ tr:nth-child(odd){
+    background-color: #e6e6e6;
+}
+
+tr:last-of-type{
+    border-bottom: 4px solid #87CEEB
+}
+
+#highlightRow{
+    border: 2px solid black;
+    color: #87CEEB;
+    background-color: yellow;
+    box-shadow: 2px 0 2px rgba(0.6), -2px 0 2px rgba(0.6);
+    font-weight: bold;
+    font-size: 16px;
+}
+/*----------*/
+
+/*styling sort bars*/
+#sortBar{
+    visibility: hidden;
+}
+
+.wrapperSort{
+    width: 425px;
+    height: 12px;
+    display: none;
+}
+.wrapperSortAll{
+    width: 50px;
+    height: 12px;
+    display:none;
+}
+.wrapperSort *{
+    text-align: center;
+    font-weight:bold;
+    font-size: 13px;
+}
+.wrapperSortAll *{
+    text-align: center;
+    font-weight:bold;
+    font-size: 15px;
+}
+.sortMenu{
+    position:relative;
+    float: right;   
+}
+.sortDrop{
+    display: none;
+    position: absolute;
+    background-color: #D3D3D3;
+    z-index:1;
+    border-radius : 5px;
+}
+
+#all_sort_drop{
+    margin: 0 23px;
+}
+#compare_sort_drop{
+    min-width: 100%;
+}
+.menuButton {
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #87CEEB;
+    color: white;
+    padding: 2px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    margin: 1px;
+    z-index: 100;
+    box-shadow: 0 0 2px #888;
+}
+
+.sortButton{
+    color: black;
+    padding: 6px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 13px;
+}
+#sortAll{
+    margin: 1px 43px;
+}
+.sortButton:hover{
+    background-color:black;
+    color:white;
+}
+.sortMenu:hover .sortDrop{
+    display: block
+}
+.menuButton:hover{
+    border: 1px solid black;
+}
+/*---------------*/
+
+
+/*styling nav bar*/
+.navbar{
+    background-color: rgb(26, 25, 25);
+    color:white;
+    height: 54px;
+    border-bottom: 2px solid #808080;
+}
+
+h1{
+    margin: 0 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h1 .logo{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navContainer{
+    max-width:1000px;
+    max-height: 53.33px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 20px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+.navbar a {
+    color:white;
+    padding: 10px;
+    text-decoration:none;
+}
+
+.navbar li:hover{
+    border-bottom: 2px solid #808080;
+}
+/*------------*/
+
+/*styling form*/
+.form{
+    /*background image is from pexels - https://www.pexels.com/photo/person-riding-bicycle-260409/ */
+    background: url(../b913396olympics/image2.jpg);
+    color: white;
+    height:520px;
+    background-position:center;
+    background-size:cover;
+    
+}
+label{
+    font-size: larger;
+    font-weight: bold;
+}
+.form:hover{
+    background: url(../b913396olympics/image2.jpg) rgba(0,0,0, 0.5);
+    background-position:center;
+    background-size:cover;
+}
+
+
+.formContainer{
+    max-width:1000px;
+    height:300px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.below_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    visibility: hidden;
+}
+
+#compareAll{
+    border-radius: 40px;
+    border: none;
+    padding: 4px 20px;
+    margin-right: 5px;
+    visibility: hidden;
+}
+#compareAll:hover{
+    background-color: rgb(26, 25, 25);
+    color:white;
+    cursor:pointer;
+    border: 1px solid white;
+}
+
+#showCyclists{
+    min-width: 173.13;
+    border-radius: 40px;
+    border: none;
+    padding: 4px 20px;
+    margin-left: 5px;
+    visibility: hidden;
+}
+
+#showCyclists:hover{
+    background-color: rgb(26, 25, 25);
+    color:white;
+    cursor:pointer;
+    border: 1px solid white;
+}
+
+#submit{
+    border-radius: 40px;
+    border: none;
+    padding: 4px 20px;
+}
+#submit:hover{
+    background-color: rgb(26, 25, 25);
+    color:white;
+    cursor:pointer;
+    border: 1px solid white;
+}
+
+#ISO1{
+    border-radius: 40px;
+    padding: 4px 13px;
+    cursor:pointer;
+    border:none;
+    margin-top: 7px;
+}
+#ISO2{
+    border-radius: 40px;
+    padding: 4px 13px;
+    cursor:pointer;
+    border:none;
+}
+
+#ISO1:hover, #ISO2:hover{
+    transform: scaleY(1.1);
+}
+
+input {
+    outline-width: 0;
+}
+
+label{
+    margin-left: 23px;
+}
+.error{
+    color: white;
+    margin-top: -20;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+/*------------*/
+
+/*styling containers for tables and lists*/
+.main_container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.compare_all_container{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+    max-height: 550px;
+}
+.table_list_container{
+    max-height: fit-content;
+    overflow-y: scroll;
+}
+
+.cyclistList{
+    display: flex;
+    flex-direction: row;
+    padding: 0 25px;
+}
+
+#Cyclists_1 {
+    max-width: 220px;
+    min-width: 220px;
+    padding: 0 5px
+}
+#Cyclists_2 {
+    max-width: 220px;
+    min-width: 220px;
+    padding: 0 5px
+}
+/*--------------*/
